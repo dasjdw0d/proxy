@@ -1,3 +1,2 @@
 # A proxy build by Project Void using Ultraviolet.
-
-Updates are coming soon.
+## IMPORTANT: Make sure NOT to use git clone to download this proxy. Link the respitory with the codespace so that it automatically updates.
