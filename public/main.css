@@ -132,13 +132,11 @@ html, body {
     100% { transform: rotate(360deg); }
 }
 
-/* Update existing search container to accommodate nav buttons */
 .search-container {
     display: flex;
     align-items: center;
 }
 
-/* Ensure the input takes up remaining space */
 #urlInput {
     flex: 1;
 }

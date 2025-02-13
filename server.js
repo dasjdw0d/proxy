@@ -12,8 +12,7 @@ import { fileURLToPath } from "node:url";
 const bare = createBareServer("/bare/")
 const __dirname = join(fileURLToPath(import.meta.url), "..");
 const app = express();
-const publicPath = "public"; // if you renamed your directory to something else other than public
-
+const publicPath = "public";
 app.use(express.static(publicPath));
 app.use("/uv/", express.static(uvPath));
 app.use("/epoxy/", express.static(epoxyPath));
