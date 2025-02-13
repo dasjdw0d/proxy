@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="/uv/uv.bundle.js"></script>
+        <script src="/uv/uv.config.js"></script>
+        <script src="/baremux/index.js"></script>
+
+        <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", async () => {
+                await navigator.serviceWorker.register("/uv/sw.js");
+            });
+        }
+        </script>
+
+        <link rel="stylesheet" href="example.css">
+        <!-- Add FontAwesome for icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </head>
+    <body>
+        <div class="search-container">
+            <div class="nav-buttons">
+                <button id="homeButton" class="nav-button"><i class="fas fa-home"></i></button>
+                <button id="backButton" class="nav-button"><i class="fas fa-arrow-left"></i></button>
+                <button id="forwardButton" class="nav-button"><i class="fas fa-arrow-right"></i></button>
+                <button id="refreshButton" class="nav-button"><i class="fas fa-redo"></i></button>
+            </div>
+            <input type="text" id="urlInput" placeholder="Search or enter URL">
+            <button id="searchButton">Go</button>
+        </div>
+        <div id="loadingScreen" class="loading-screen">
+            <div class="spinner"></div>
+            <div class="loading-text">Loading...</div>
+        </div>
+        <iframe id="iframeWindow" class="iframeWindow"></iframe>
+    </body>
+    <script src="example.js"></script>
+</html>
